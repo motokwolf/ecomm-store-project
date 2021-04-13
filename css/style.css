@@ -13,25 +13,76 @@ html {
 	/* etc, etc... */
 
     --pad-and-gap: 1em;
+    --font-text: 'Montserrat', sans-serif;
+    --font-tittle: 'Playfair Display', serif;
 }
+
+/* base from walkthrough */
 
 body {
     background-color: var(--primary-col-fill);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-text);
     font-size: 0.9em;
     line-height: 1.7;
     color: var(--primary-col);
     padding: var(--pad-and-gap);
 }
 
-.products .page-header .page-footer {
+ul {
+    list-style-type: none;
+}
+
+h1, h3 {
+    font-family: var(--font-tittle);
+}
+
+img {
+    max-width: 100%;  
+    height: auto;  
+}
+
+del {
+    font-size: 0.9em;
+    color: var(--primary-alt);
+}
+
+ins {
+    font-size: 1.3em;
+    color: var(--secondary-col);
+}
+
+button {
+    padding: 0.5em var(--pad-and-gap);
+    background-color: var(--secondary-alt);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: var(--font-tittle);
+    /* transition: 0.3s; */
+    cursor: pointer;
+    border: none;
+}
+
+/* button hover dont work */
+/* 
+.button :hover {
+    opacity: 0.6
+} */ 
+
+.products, .page-header, .page-footer {
    padding-left: var(--pad-and-gap);
    padding-right: var(--pad-and-gap);
-    }
+
+}
 
 .your-products {
     display: flex;
+    justify-content: space-evenly;
+
 }
+    .your-products > li {
+        padding: var(--pad-and-gap);
+    }
+
 
 .pagination {
     text-align: center;
@@ -46,7 +97,7 @@ body {
     margin: calc(var(--pad-and-gap)/2) ;
 }
 
-.social .legal {
+.social, .legal {
     display: flex;
     justify-content: flex-end;
     margin: calc(var(--pad-and-gap)/2) ;
@@ -54,4 +105,21 @@ body {
 
 .copyright {
     text-align: right;
+}
+
+/* smallest viewport (mobile) */
+
+.page-header {
+    display: grid ;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas:
+    " logo . . nav-toggle "
+    " search search search search "
+    " navigation navigation navigation navigation " 
+    " . . your-products . ";
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
 }
