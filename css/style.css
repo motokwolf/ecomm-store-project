@@ -3,11 +3,55 @@
 /* socorro!!!! */
 
 html {
-	--primary-col: #ff3366;    /* main colour */
-	--primary-alt: #ff6699;    /* variant */
-	--primary-on: #ffffff;     /* for text or icons */
-	--secondary-col: #3399ff;
-	--secondary-alt: #99ccff;
-	--secondary-on: #000000;
+	--primary-col: #222222;    /* main colour */
+	--primary-alt: #4c4c4c;    /* variant */
+	--primary-on: #000000;     /* for text or icons */
+    --primary-col-fill: #F2F2F2; /* bg fill */
+	--secondary-col: #600c1a; /* selected */
+	--secondary-alt: #C19529; /* hover */
+	--secondary-on: #C9B069; /* buttons */
 	/* etc, etc... */
+
+    --pad-and-gap: 1em;
+}
+
+body {
+    background-color: var(--primary-col-fill);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.7;
+    color: var(--primary-col);
+    padding: var(--pad-and-gap);
+}
+
+.products .page-header .page-footer {
+   padding-left: var(--pad-and-gap);
+   padding-right: var(--pad-and-gap);
+    }
+
+.your-products {
+    display: flex;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+}
+
+.pages > li {
+    margin: calc(var(--pad-and-gap)/2) ;
+}
+
+.social .legal {
+    display: flex;
+    justify-content: flex-end;
+    margin: calc(var(--pad-and-gap)/2) ;
+}
+
+.copyright {
+    text-align: right;
 }
