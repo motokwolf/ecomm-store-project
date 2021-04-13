@@ -7,7 +7,7 @@
     <meta name="description" content="Fountain pen and inks specialized store">
     <meta name="author" content="[Karen Carnaval]">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,7 +16,7 @@
 
       <!-- Navigation menu and toggle button (non-functional) -->
       <button type="button" class="nav-toggle">
-        <span class="material-icons">menu</span>
+        <span class="material-icons-round">menu</span>
       </button>
       <nav aria-label="Primary" class="navigation">
         <ul class="menu">
@@ -37,7 +37,7 @@
         <label>Search
           <input type="search" name="find" id="find">
         </label>
-        <button type="button"><span class="material-icons">search</span></button>
+        <button type="button"><span class="material-icons-round">search</span></button>
       </form>
 
       <!-- Additional links -->
@@ -62,7 +62,8 @@
             <ul class="filter-list">
               <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
               <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+              <li><input type="checkbox" name="colour" value="silver" id="silver"> <label for="silver">Silver</label></li>
+              <li><input type="checkbox" name="colour" value="gold" id="gold"> <label for="gold">Gold</label></li>
               <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
               <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
             </ul>
@@ -73,25 +74,25 @@
               <li>
                 <input type="radio" name="rating" value="4" id="aboveFour">
                 <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                  <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="rating" value="3" id="aboveThree">
                 <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="rating" value="2" id="aboveTwo">
                 <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>
                 </label>
               </li>
               <li>
                 <input type="radio" name="rating" value="1" id="aboveOne">
                 <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  <span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>
                 </label>
               </li>
             </ol>
@@ -120,7 +121,7 @@
             <p>Sailor Japanese Pen Company takes pride in the professionally skilled craftsman who ensure each nib is perfect.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>5.0 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>5.0 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -128,23 +129,15 @@
             <fieldset>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="k"> Black</label></li>
                 <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
 
@@ -157,7 +150,7 @@
             <p>Includes one proprietary Pilot squeeze converter for use with bottled ink, and one proprietary ink cartridge.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -165,23 +158,16 @@
             <fieldset>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="s"> Silver</label></li>
                 <li><label><input type="radio" name="colour" value="w"> White</label></li>
                 <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
 
@@ -194,7 +180,7 @@
             <p>Century 3776 (one converter with purchase).</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.2 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.2 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -202,23 +188,14 @@
             <fieldset>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label><input type="radio" name="colour" value="k"> Black</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
   
@@ -231,31 +208,23 @@
             <p>This pen is a great way to get into the world of flex pens - writes like a fine nib with minimal pressure.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>5.0 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>5.0 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
           <form>
             <fieldset>
               <legend>Colours</legend>
-              <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+              <ul>q
+                <li><label><input type="radio" name="colour" value="g"> Gold</label></li>
+                <li><label><input type="radio" name="colour" value="k"> Black</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
 
@@ -268,7 +237,7 @@
             <p>The Pilot Metropolitan is a great starter pen. With its sleek metal body, easy snap cap, and smooth nib it's a perfect everyday writer.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.9 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.9 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -281,18 +250,11 @@
                 <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
 
@@ -305,7 +267,7 @@
             <p>With one of the smoothest nibs in its price range, it has the additional bonus of easily interchangeable nibs.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.9 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.2 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -313,23 +275,15 @@
             <fieldset>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label><input type="radio" name="colour" value="g"> Gold</label></li>
+                <li><label><input type="radio" name="colour" value="s"> Silver</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
       </section>
@@ -343,7 +297,7 @@
             <p>Aptly named their "classic" fountain pen, the Sport has been an icon of the Kaweco brand for more than 80 years.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.5 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.5 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -352,22 +306,13 @@
               <legend>Colours</legend>
               <ul>
                 <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
       </section>
@@ -381,7 +326,7 @@
             <p>Parker Jotter Fountain Pen - Bond Street Black CT, Comes with: 1 cartridge</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.4 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -389,23 +334,15 @@
             <fieldset>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li><label><input type="radio" name="colour" value="s"> Silver</label></li>
                 <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
       </section>
@@ -419,7 +356,7 @@
             <p>A perfect starter pen, with an ergonomic triangular rubberised grip.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.0 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.0 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -432,18 +369,11 @@
                 <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
       </section>
@@ -457,7 +387,7 @@
             <p>It's a pen in every veteran writer's collection and its price makes it a top choice for new writers.</p>
             <dl>
               <dt>Rating</dt>
-              <dd>4.6 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+              <dd>4.6 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span></dd>
             </dl>
             <a href="#">see more</a>
           </header>
@@ -465,23 +395,16 @@
             <fieldset>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="s"> Silver</label></li>
                 <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label><input type="radio" name="colour" value="k"> Black/label></li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+            
           </form>
           <footer>
-            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-            <button type="button"><span class="material-icons">favorite</span></button>
+            <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+            <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
           </footer>
         </article>
       </section>
@@ -500,9 +423,9 @@
 
     <footer class="page-footer">
       <ul class="social">
-        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+        <li><a href="#"><span class="material-icons-round">face</span> Facebook</a></li>
+        <li><a href="#"><span class="material-icons-round">camera_alt</span> Instagram</a></li>
+        <li><a href="#"><span class="material-icons-round">alternate_email</span> Twitter</a></li>
       </ul>
       <nav aria-label="Legal">
         <ul class="legal">
@@ -511,7 +434,7 @@
           <li><a href="#">Accessibility Policy</a></li>
         </ul>
       </nav>
-      <p class="copyright">&copy; Copyright, 1991.</p>
+      <p class="copyright">Scripta &copy; Copyright, 2021.</p>
     </footer>
 
   </body>
