@@ -28,12 +28,34 @@ body {
     padding: var(--pad-and-gap);
 }
 
+.heading {
+    padding: none;
+    margin: none;
+    position: relative;
+    text-align: center;
+    font-size: 1.4em;
+    color: white;
+    text-shadow: 1px 1px var(--primary-on);
+}
+
+    .heading > h1 {
+        position: absolute;
+        top: 10%;
+        left: 20px
+    }
+
 ul {
     list-style-type: none;
 }
 
 h1, h3 {
     font-family: var(--font-tittle);
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 0.3em 0em;
+    color: var(--secondary-col);
 }
 
 img {
@@ -46,10 +68,57 @@ del {
     color: var(--primary-alt);
 }
 
-ins {
-    font-size: 1.3em;
+a {
     color: var(--secondary-col);
 }
+
+ins {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 0.2em;
+    color: var(--secondary-alt);
+}
+
+p {
+    margin: 0em
+}
+
+.product {
+    margin: 0em 0em 6em 0em;
+}
+
+.product > header {
+    display: grid;
+    grid-template-columns: auto 40%;
+    grid-gap: 0.3em;
+    grid-template-areas:
+    " img img "
+    " h3 h3 "
+    " . . "
+    " p dl "
+    " a . " ;
+}
+
+.product > form, footer, dt {
+    display: none;
+}
+
+dd {
+    font-size: 0.8em;
+    
+}
+
+dd > span {
+    color: var(--secondary-alt);
+    vertical-align: middle;
+}
+
+img { grid-area: img; }
+h3 { grid-area: h3; }
+p { grid-area: p; }
+dl { grid-area: dl; }
+a { grid-area: a; }
 
 button {
     padding: 0.5em var(--pad-and-gap);
@@ -62,11 +131,9 @@ button {
     border: none;
 }
 
-/* button hover dont work */
-/* 
-.button :hover {
-    opacity: 0.6
-} */ 
+button:hover {
+    opacity: 0.7;
+}
 
 .products, .page-header, .page-footer {
    padding-left: var(--pad-and-gap);
@@ -107,19 +174,48 @@ button {
     text-align: right;
 }
 
-/* smallest viewport (mobile) */
-
 .page-header {
-    display: grid ;
+    display: grid; 
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas:
-    " logo . . nav-toggle "
+    " logo . your-products nav-toggle "
     " search search search search "
     " navigation navigation navigation navigation " 
-    " . . your-products . ";
 }
+
+.nav-toggle { grid-area: nav-toggle; }
+.logo { grid-area: logo; }
+.search { grid-area: search; }
+.navegation { grid-area: navegation; }
+.your-products { grid-area: your-products; }
 
 .filter-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+.filter-list > li {
+    padding: 0em;
+}
+
+/* search */
+
+.search {
+    padding-left: 20px;
+    display: flex;
+    width: max-content;
+    border: solid 1px #929292;
+    color:#4c4c4c;
+    background-color: white;
+}
+    input {
+        padding: 1em;
+        border: none;    
+        margin: none;
+        display: inline;
+    }
+
+
+
+/* smallest viewport (mobile) */
+
