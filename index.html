@@ -63,7 +63,7 @@
         <h2>Filters</h2>
 
         <div class="filter-options">
-          <fieldset>
+          <fieldset class="colour-field">
             <legend>Colour</legend>
             <ul class="filter-list">
               <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
@@ -74,9 +74,9 @@
               <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="rating-field">
             <legend>Ratings (above)</legend>
-            <ul class="filter-list">
+            <ul class="filter-list golden">
               <li>
                 <input type="radio" name="rating" value="4" id="aboveFour">
                 <label for="aboveFour">
@@ -104,8 +104,8 @@
             </ol>
           </fieldset>
         </div>
-        <fieldset>
-          <label for="sort">Show</label>
+        <fieldset class="sort-field">
+          <label  for="sort">Show</label>
           <select name="sort" id="sort">
             <option value="newest">Best Selling</option>
             <option value="price-high">Price, highest to lowest</option>
