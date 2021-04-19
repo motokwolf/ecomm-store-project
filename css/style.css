@@ -209,10 +209,55 @@ fieldset {
     }
 
 
+/*product Page */
+.one-product {
+    margin-top: calc(var(--pad-and-gap)*2);
+    padding: var(--pad-and-gap);
+    display: grid;
+}
+
+.one-price {
+    font-size: 2em;
+}
+
+.product-option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one-button {
+    padding: var(--pad-and-gap);
+    width: 15em;
+    max-height: 4em;
+}
+
+.description {
+    margin: var(--pad-and-gap);
+    padding-top: 1em;
+    max-width: 40em;
+}
+
+.related-products {
+    max-width: 30em;
+}
+
+.more-pictures {
+    display: flex;
+    padding: var(--pad-and-gap) 0;
+    border-top: 1px solid var(--primary-lightest);
+    height: 8em;
+    max-width: 100%;
+    opacity: 60%;
+    justify-content: space-between;
+}
+
+.more-pictures:hover {
+    opacity: 100%;
+}
 
 /* Product Styling Description */
-
-
 
 .product {
     margin: 0em 0em 6em 0em;
@@ -344,6 +389,12 @@ button:hover {
         display: block;
     }  
 
+    .one-product {
+        max-width: 40em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 
 }
 
@@ -420,6 +471,37 @@ button:hover {
     .subheading {
         grid-column: span 2;
     }
+
+    /* product page*/
+
+    .one-product {
+        padding: var(--pad-and-gap);
+        max-width: 50em;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-gap: calc(var(--pad-and-gap)/2);
+        grid-template-columns: 30em auto;
+        grid-template-areas: 
+        " img-product product-info "
+        " product-option product-option "
+        " description description "
+        " related-products related-products "
+        ;
+    }
+    
+    .product-info { grid-area: product-info;}
+    .product-option { grid-area: product-option;}
+    .description { grid-area: description; }
+    .related-products { grid-area: related-products;}
+    .img-product { grid-area: img-product;}
+
+    .product-option {
+        justify-content: flex-end;
+        border-bottom: var(--primary-lightest) 1px solid;
+    }
+
+
 }
 
 /* largest viewport */

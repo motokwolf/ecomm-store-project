@@ -15,7 +15,111 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
     <link rel="stylesheet" href="css/style.css">
   </head>
-<body>
-    
-</body>
+  <body>
+    <header class="page-header">
+      <a href="index.html" class="logo"><img src="img/Scripta-logo.svg" alt="Scripta Logo" width="130"></a>
+
+      <!-- Navigation menu and toggle button0nn-functional) -->
+      <button type="button" class="nav-toggle">
+        <span class="material-icons-round">menu</span>
+      </button>
+      <nav aria-label="Primary" class="navigation">
+        <ul class="menu">
+          <li><a href="#">Shop</a>
+            <ul class="submenu">  
+              <li><a href="#">Fountain Pens</a></li>
+              <li><a href="#">Calligraphy Pens</a></li>
+              <li><a href="#">Inks</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search for a product nn-functional) -->
+      <form class="search">
+        <label>Search
+          <input type="search" name="find" id="find">
+        </label>
+        <button type="button"><span class="material-icons-round">search</span></button>
+      </form>
+
+      <!-- Additional links -->
+      <ul class="your-products">
+        <li><a href="#"><img src="img/favorite.svg" alt="Favorites" width="20"></a></li>
+        <li><a href="#"><img src="img/cart.svg" alt="Shopping Cart" width="30"></a></li>
+      </ul>
+    </header>
+
+    <main>
+      <article class="one-product">
+        <img class="img-product" src="img/product-detail01.jpg">
+        <header class="product-info">
+          <h3 class="one-price">Pilot Fountain Pen Kakuno</h3>
+          <dl>
+            <dd>5.0 <span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span></dd>
+          </dl>
+          <data value="39"><del>$80.00</del> <ins class="one-price">$68.50</ins></data>
+        </header>
+        <form class="product-option">
+          <fieldset class="sort-field">
+            <label  for="sort">Colours</label>
+            <select name="sort" id="sort">
+              <option value="choice">Choose colour</option>
+              <option value="k">Black</option>
+              <option value="w">White</option>
+              <option value="r">Red</option>
+            </select>
+          </fieldset>
+
+          <button type="button" class="one-button"><img src="img/cart.svg" alt="Shopping Cart" width="24" style="vertical-align:middle"> Add to Cart</button>
+        </form>
+
+        <div class="description"> <p>Sailor Japanese Pen Company takes pride in the professionally skilled craftsman who ensure each nib is perfect. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, consequuntur. Nisi ab quis eaque consectetur maiores atque sint quasi accusamus totam magnam doloribus expedita voluptatum modi, amet vitae hic mollitia! </p> </div>
+
+        <footer>
+          <div class="related-products">
+            <label for="more-pictures">Related Products</label>
+              <div name="more-pictures" class="more-pictures">
+                <img src="img/product01.jpg"><img src="img/product02.jpg"><img src="img/product03.jpg">
+              </div>
+            </label>
+          </div>
+        </footer>
+          
+
+
+
+      </article>
+
+
+    </main>
+    <nav aria-label="Pagination" class="pagination">
+        <p>Return to Search</p>
+        <ul class="pages">
+          <li><a href="index.html"><span class="material-icons-round">
+            arrow_back
+            </span></a></li>
+        </ul>
+      </nav>
+
+
+    <footer class="page-footer">
+      <ul class="social">
+        <li><a class="page-footer" href="#"><span class="material-icons-round">face</span> Facebook</a></li>
+        <li><a class="page-footer" href="#"><span class="material-icons-round">camera_alt</span> Instagram</a></li>
+        <li><a class="page-footer" href="#"><span class="material-icons-round">alternate_email</span> Twitter</a></li>
+      </ul>
+      <nav aria-label="Legal">
+        <ul class="legal">
+          <li><a class="page-footer" href="#">Terms of Use</a></li>
+          <li><a class="page-footer" href="#">Privacy Policy</a></li>
+          <li><a class="page-footer" href="#">Accessibility Policy</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">Scripta &copy; Copyright, 2021.</p>
+    </footer>
+
+  </body>
 </html>
