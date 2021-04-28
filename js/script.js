@@ -12,7 +12,6 @@
 
 //Gallery (on product page)
 
-// Select all of the thumbnails
 const theThumbs = document.querySelectorAll('.thumb')
 const bigImg = document.querySelector(`#bigimg`)
 
