@@ -521,3 +521,24 @@ button:hover {
     }
 
 }
+
+/*product galery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 40em;
+    margin: 0 auto;
+    grid-gap: 1em;
+  }
+  .bigimg {
+    grid-column: span 3;
+  }
+  
+  .thumb {
+    opacity: 70%;
+  }
+
+  .thumb:hover {
+      opacity: 100%;
+  }
