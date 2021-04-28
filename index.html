@@ -20,22 +20,24 @@
       <a href="index.html" class="logo"><img src="img/Scripta-logo.svg" alt="Scripta Logo" width="130"></a>
 
       <!-- Navigation menu and toggle button0nn-functional) -->
-      <button type="button" class="nav-toggle">
-        <span class="material-icons-round">menu</span>
-      </button>
-      <nav aria-label="Primary" class="navigation">
-        <ul class="menu">
-          <li><a href="#">Shop</a>
-            <ul class="submenu">  
-              <li><a href="#">Fountain Pens</a></li>
-              <li><a href="#">Calligraphy Pens</a></li>
-              <li><a href="#">Inks</a></li>
-            </ul>
-          </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="dropdown-menu">
+        <button type="button" onclick="menuToggle()" class="nav-toggle">
+          <span class="material-icons-round">menu</span>
+        </button>
+        <nav aria-label="Primary" class="navigation" id="nav-toggle">
+          <ul class="menu" id="menu">
+            <li><a href="#">Shop</a>
+              <ul class="submenu">  
+                <li><a href="#">Fountain Pens</a></li>
+                <li><a href="#">Calligraphy Pens</a></li>
+                <li><a href="#">Inks</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <!-- Search for a product nn-functional) -->
       <form class="search">

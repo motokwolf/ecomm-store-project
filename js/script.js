@@ -9,6 +9,13 @@
 //Sorting
 
 //Menu Toggle
+  //top menu toggle, insertion of 'hidden' on css for that object, on smallest viewport
+
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function menuToggle() {
+    document.getElementById("menu").classList.toggle("show");
+  }
 
 //Gallery (on product page)
 
