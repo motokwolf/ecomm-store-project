@@ -78,11 +78,25 @@ const productsAr = [
       }
 ]
 
-productsAr.forEach(function(anImg, index) {
-  console.log(arr)
-}
-)
+//Product Array
 
+    // Select the element (a <ul> in this case) that will hold all of the student records
+    const productsTable = document.querySelector(`#productsTable`)
+
+    // Clear out information that already exists
+    productsTable.innerHTML = ``
+
+    // For each of the students in our "database"
+    productsAr.forEach((product) => {
+
+      // Create a article
+      const productItem = document.createElement(`article`)
+
+      // Modify this new element, just like we would any other DOM element
+      productItem.classList.add(`product`)
+      productItem.innerHTML = `<p>beans</p>`
+
+    })
 
 //Filter
 
