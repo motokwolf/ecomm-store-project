@@ -86,29 +86,68 @@ const productsAr = [
 
 
 // Select the element (a <ul> in this case) that will hold all of the student records
-const studentTable = document.querySelector(`#studentTable`)
+const studentTable = document.querySelector(`#productsTable`)
 
 const setStudentToTable = function(theArray) {
 
   // Clear out information that already exists
-  studentTable.innerHTML = ``
+  productsTable.innerHTML = ``
 
   // For each of the students in our "database"
-  theArray.forEach((student) => {
+  theArray.forEach((product) => {
 
     // Create a list item (<li>) that is not yet added to the document
-    const listItem = document.createElement(`li`)
+    const productItem = document.createElement(`article`)
+
+    //Array colors
+    var colourOptions = theArray.forEach (product.colours) => {
+        `<li><label><input type="radio" name="colour"> ${product.colours}</label></li>`
+    }
+
+    //Rating
+    if ( `${product.rating}` => 1) {
+        ratingStars = `<span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
+    } else if ( `${product.rating}` => 2) {
+        ratingStars = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
+    } else if ( `${product.rating}` => 3) {
+        ratingStars = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
+    }  else if ( `${product.rating}` => 4) {
+        ratingStars = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span>`;
+    }  else (`${product.rating}` => 5) {
+        ratingStars = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span>`;
+    }
 
     // Modify this new element, just like we would any other DOM element
-    listItem.classList.add(`student`)
-    listItem.innerHTML = `
-      <img src="img/${student.photo}" alt="${student.name.first}" class="photo">
-      <b>${student.name.last}, ${student.name.first}</b>
-      <data value="${student.gpa }">${ student.gpa } GPA</data>
+    productItem.classList.add(`product`)
+    productItem.innerHTML = `
+    <header>
+      <a href="product.html"><img src="img/product${product.id}.jpg" alt="Product Image: ${product.name}"></a>
+      <h3>${product.name}</h3>
+      <data value="${product.ins}"><ins>${product.ins}</ins></data>
+      <p>${product.productsTable}</p>
+      <dl>
+        <dt>Rating</dt>
+        <dd>${product.rating} ${ratingStars}</dd>
+      </dl>
+      <a href="product.html">see more</a>
+    </header>
+    <form>
+      <fieldset>
+        <legend>Colours</legend>
+        <ul>
+          ${colourOptions}
+        </ul>
+      </fieldset>
+      
+    </form>
+    <footer>
+      <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+      <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
+    </footer>
     `
 
     // Add the new <li> element to the document
-    studentTable.appendChild(listItem)
+    productTable.appendChild(listItem)
   })
 
 }
