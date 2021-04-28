@@ -86,9 +86,9 @@ const productsAr = [
 
 
 // Select the element (a <ul> in this case) that will hold all of the student records
-const studentTable = document.querySelector(`#productsTable`)
+const productsTable = document.querySelector(`#productsTable`) //ok
 
-const setStudentToTable = function(theArray) {
+const setProductsToTable = function(theArray) {
 
   // Clear out information that already exists
   productsTable.innerHTML = ``
@@ -100,7 +100,7 @@ const setStudentToTable = function(theArray) {
     const productItem = document.createElement(`article`)
 
     //Array colors
-    var colourOptions = theArray.forEach (product.colours) => {
+   var colourOptions = theArray.forEach (product.colours) => {
         `<li><label><input type="radio" name="colour"> ${product.colours}</label></li>`
     }
 
