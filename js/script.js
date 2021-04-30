@@ -24,8 +24,8 @@ const productsAr = [
       name: `Lamy Z24 Converter`,
       ins: `$20.90`,
       description: `Century 37760oe converter with purchase.`,
-      rating: 4.2,
-      colours: `Black`,
+      rating: 1,
+      colours: [`Black` ],
       }, {
       id: 04,
       name: `Noodler's Ahab Flex Fountain Pen`,
@@ -53,14 +53,14 @@ const productsAr = [
       ins: `$33.50`,
       description: `Aptly named their "classic" fountain pen, the Sport has been an icon of the Kaweco brand for more than 80 years.`,
       rating: 4.5,
-      colours: `Red`,
+      colours: [ `Red`],
       }, {
       id: 08,
       name: `Parker Fountain Pen`,
       ins: `$25.90`,
       description: `Parker Jotter Fountain Pen - Bond Street Black CT. Comes with: 1 cartridge.`,
       rating: 4.4,
-      colours: `Silver`,
+      colours: [ `Silver`],
       }, {
       id: 09,
       name: `Faber-Castell School Fountain Pen`,
@@ -76,27 +76,146 @@ const productsAr = [
       rating: 4.6,
       colours: [ `Silver`, `White`, `Black` ],
       }
-]
+];
+
 
 //Product Array
 
     // Select the element (a <ul> in this case) that will hold all of the student records
-    const productsTable = document.querySelector(`#productsTable`)
+    
+    // console.log(productsTable);
+    // const productsTable = document.querySelector(`#productsTable`);
 
-    // Clear out information that already exists
-    productsTable.innerHTML = ``
+    // const producttoAddArray = function(tarry) {
+    //   productsTable.innerHTML = ``;
+    //   tarry.forEach((products) => {
+        // console.log(productsAr.id)
+      //   const productItem = document.createElement(`li`);
+      // productItem.classList.add(`product`)
 
-    // For each of the students in our "database"
-    productsAr.forEach((product) => {
+      //   productItem.innerHTML = `<p>hsjdfhjsdf</p>`;
 
-      // Create a article
-      const productItem = document.createElement(`article`)
+      //   productsTable.appendChild(productItem);
 
+      //   console.log(productItem);
+      
+      
       // Modify this new element, just like we would any other DOM element
-      productItem.classList.add(`product`)
-      productItem.innerHTML = `<p>beans</p>`
 
-    })
+    //   });
+
+    // }
+
+const studentTable = document.querySelector(`#productsTable`)
+
+const setStudentToTable = function(theArray) {
+
+  // Clear out information that already exists
+  studentTable.innerHTML = ``;
+
+  // For each of the students in our "database"
+  theArray.forEach((product) => {
+
+    // Create a list item (<li>) that is not yet added to the document
+    const listItem = document.createElement(`li`)
+
+    // Modify this new element, just like we would any other DOM element
+    listItem.classList.add(`product`)
+    
+    // ------------------------------------
+ //Rating
+
+ let ramestarme = ``
+ let ratingStarss = ``
+ if ( `${product.rating}` >= 1 && `${product.rating}` < 2 ) {
+  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
+  ramestarme += ratingStarss;
+}
+
+
+ else if ( `${product.rating}` >= 2 && `${product.rating}` < 3) {
+  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
+  ramestarme += ratingStarss;
+}
+ else if ( `${product.rating}` >= 3 && `${product.rating}` < 4) {
+  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
+  ramestarme += ratingStarss;
+}
+  else if (`${product.rating}` >= 4 && `${product.rating}` < 5) {
+  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span>`
+  ramestarme += ratingStarss;
+}
+  else {
+  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span>`
+  ramestarme += ratingStarss;
+}
+
+
+// ---------------------------------------
+
+//Colours
+
+// array of colors each have one a string of text
+
+let colorme = product.colours
+let colorOption = ``
+let colorsss = ``
+for (let i = 0; i < colorme.length;i++) {
+  colorsss = `<li><label><input type="radio" name="colour"> ${colorme[i]}</label></li>`
+
+  colorOption += colorsss
+}
+console.log(colorOption);
+// forEach((color) => {
+//   colourOptions += `<li><label><input type="radio" name="colour"> ${color}</label></li>`
+// });
+
+// console.log(colourOptions);
+
+//<li><label><input type="radio" name="colour" value="k"> Black</label></li>
+
+
+// -------------------------
+
+
+    listItem.innerHTML = `
+    <header>
+      <a href="product.html"><img src="img/product0${product.id}.jpg" alt="Product Image: ${product.name}"></a>
+      <h3>${product.name}</h3>
+      <data value="${product.ins}"><ins>${product.ins}</ins></data>
+      <p>${product.description}</p>  
+      
+        <dl>
+        <dt>Rating</dt>
+        <dd>${product.rating} ${ramestarme} </dd>
+      </dl>
+      <a href="product.html">see more</a>
+    </header>
+    <form>
+      <fieldset>  
+        <legend>Colours</legend>
+        <ul> 
+       ${colorOption}
+        </ul>
+      </fieldset>
+      
+    </form>
+    <footer>
+      <button type="button"><img src="img/cart.svg" alt="Shopping Cart" width="24"> Add to Cart</button>
+      <button type="button"><img src="img/favorite.svg" alt="Favorites" width="24"></button>
+    </footer>  
+    `
+
+    // Add the new <li> element to the document
+    studentTable.appendChild(listItem)
+    
+  });
+
+}
+setStudentToTable(productsAr);
+
+
+
 
 //Filter
 
@@ -110,28 +229,4 @@ toggle between hiding and showing the dropdown content */
 function menuToggle() {
     document.getElementById("menu").classList.toggle("show");
   }
-
-//Gallery (on product page)
-
-const theThumbs = document.querySelectorAll('.thumb')
-const bigImg = document.querySelector(`#bigimg`)
-
-const makeClickable = function (whichOne) {
-
-  const setThumb = function(event) {
-
-    // Getting the data required to load up the big image
-    let imgSrc = whichOne.getAttribute(`src`)
-    let imgAlt = whichOne.getAttribute(`alt`)
-
-    // Update the big image's attributes
-    bigImg.setAttribute(`src`, imgSrc)
-    bigImg.setAttribute(`alt`, imgAlt)
-  }
-
-  whichOne.addEventListener(`click`, setThumb)
-}
-
-// For each of the thumbnails selected, run the makeClickable function
-theThumbs.forEach(makeClickable)
 
