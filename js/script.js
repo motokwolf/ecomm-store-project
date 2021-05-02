@@ -17,7 +17,7 @@ const productsAr = [
       name: `Pilot Metropolitan`,
       ins: `$30.00`,
       description: `Includes one proprietary Pilot squeeze converter for use with bottled ink, and one proprietary ink cartridge.`,
-      rating: 4.4,
+      rating: 2.5,
       colours: [ `Silver`,  `White`, `Blue`] ,
       }, {
       id: 03,
@@ -66,7 +66,7 @@ const productsAr = [
       name: `Faber-Castell School Fountain Pen`,
       ins: `$20.00`,
       description: `A perfect starter pen, with an ergonomic triangular rubberised grip.`,
-      rating: 4.0,
+      rating: 3.0,
       colours: [ `Red`, `White`, `Blue` ],
       }, {
       id: 10,
@@ -103,18 +103,32 @@ const setproductToTable = function(theArray) {
 
 
       //Rating (to add to template)---ok//
+      // there is probably a easier way to do this but ¯\_(ツ)_/¯
+
+      // idea, each number add one star html string of text, 1 = "one star" 1 - 5 = 4 = "empty star"?? or string is += for set value??  (idk how 0.5 stars would work on this tho)
 
       let addStars = ``
       let ratingStarss = ``
-      if ( `${product.rating}` >= 1 && `${product.rating}` < 2 ) {
+      if ( `${product.rating}` >= 1 && `${product.rating}` < 1.5 ) {
         ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
         addStars += ratingStarss;
       }
 
-      else if ( `${product.rating}` >= 2 && `${product.rating}` < 3) {
+      else if ( `${product.rating}` >= 1.5 && `${product.rating}` < 2 ) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star_half</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
+        addStars += ratingStarss;
+      }
+
+      else if ( `${product.rating}` >= 2 && `${product.rating}` < 2.5) {
         ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
         addStars += ratingStarss;
       }
+
+      else if ( `${product.rating}` >= 2.5 && `${product.rating}` < 3) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
+        addStars += ratingStarss;
+      }
+
       else if ( `${product.rating}` >= 3 && `${product.rating}` < 3.5) {
         ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
         addStars += ratingStarss;
@@ -153,10 +167,9 @@ const setproductToTable = function(theArray) {
 
         colourOption += colorsss
       }
-      console.log(colourOption);
 
 // -------------------------
-// Product Template to HTML
+// Product Template to HTML ---ok//
 
     listItem.innerHTML = `
     <header>
@@ -197,11 +210,32 @@ setproductToTable(productsAr);
 
 
 
-//Filter
+//Filter ---ok//
 
+// Select the range slider (filter)
+const filterRating = document.querySelector(`#ratingFilter`)
 
+//my attempt (wasnt needed because there is a eventListener on the entire list)
+//---theRange = document.querySelector(`input[name="rating"]:checked`).value
 
+// Every time any input on filterRating value changes...
+filterRating.addEventListener(`input`, function(event) {
 
+  // What was clicked is
+const theRange = event.target
+
+  // filter() 
+const filteredProducts = productsAr.filter(function(product) {
+    if (product.rating >= Number(theRange.value)) {
+      return true
+    } else {
+      return false
+}
+})
+
+  // Build the Page with filtered array
+ setproductToTable(filteredProducts)
+})
 
 
 //Sorting?
