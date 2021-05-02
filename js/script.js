@@ -1,8 +1,8 @@
           // script time!
 
-          //project requirements 
+          //project requirements: 
 
-// Product Data
+// Product Data ---ok//
 
 const productsAr = [
   {
@@ -24,7 +24,7 @@ const productsAr = [
       name: `Lamy Z24 Converter`,
       ins: `$20.90`,
       description: `Century 37760oe converter with purchase.`,
-      rating: 1,
+      rating: 3.5,
       colours: [`Black` ],
       }, {
       id: 04,
@@ -79,41 +79,18 @@ const productsAr = [
 ];
 
 
-//Product Array
 
-    // Select the element (a <ul> in this case) that will hold all of the student records
-    
-    // console.log(productsTable);
-    // const productsTable = document.querySelector(`#productsTable`);
+//------------//
+//Product Array (based on student array exercise)
 
-    // const producttoAddArray = function(tarry) {
-    //   productsTable.innerHTML = ``;
-    //   tarry.forEach((products) => {
-        // console.log(productsAr.id)
-      //   const productItem = document.createElement(`li`);
-      // productItem.classList.add(`product`)
+const productTable = document.querySelector(`#productsTable`)
 
-      //   productItem.innerHTML = `<p>hsjdfhjsdf</p>`;
-
-      //   productsTable.appendChild(productItem);
-
-      //   console.log(productItem);
-      
-      
-      // Modify this new element, just like we would any other DOM element
-
-    //   });
-
-    // }
-
-const studentTable = document.querySelector(`#productsTable`)
-
-const setStudentToTable = function(theArray) {
+const setproductToTable = function(theArray) {
 
   // Clear out information that already exists
-  studentTable.innerHTML = ``;
+  productTable.innerHTML = ``;
 
-  // For each of the students in our "database"
+  // For each of the product in our "database"
   theArray.forEach((product) => {
 
     // Create a list item (<li>) that is not yet added to the document
@@ -122,61 +99,64 @@ const setStudentToTable = function(theArray) {
     // Modify this new element, just like we would any other DOM element
     listItem.classList.add(`product`)
     
-    // ------------------------------------
- //Rating
-
- let ramestarme = ``
- let ratingStarss = ``
- if ( `${product.rating}` >= 1 && `${product.rating}` < 2 ) {
-  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
-  ramestarme += ratingStarss;
-}
+    // -----------//
 
 
- else if ( `${product.rating}` >= 2 && `${product.rating}` < 3) {
-  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
-  ramestarme += ratingStarss;
-}
- else if ( `${product.rating}` >= 3 && `${product.rating}` < 4) {
-  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
-  ramestarme += ratingStarss;
-}
-  else if (`${product.rating}` >= 4 && `${product.rating}` < 5) {
-  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span>`
-  ramestarme += ratingStarss;
-}
-  else {
-  ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span>`
-  ramestarme += ratingStarss;
-}
+      //Rating (to add to template)---ok//
+
+      let addStars = ``
+      let ratingStarss = ``
+      if ( `${product.rating}` >= 1 && `${product.rating}` < 2 ) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
+        addStars += ratingStarss;
+      }
+
+      else if ( `${product.rating}` >= 2 && `${product.rating}` < 3) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`;
+        addStars += ratingStarss;
+      }
+      else if ( `${product.rating}` >= 3 && `${product.rating}` < 3.5) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span><span class="material-icons-round">star_border</span>`
+        addStars += ratingStarss;
+      }
+      else if ( `${product.rating}` >= 3.5 && `${product.rating}` < 4) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span><span class="material-icons-round">star_border</span>`
+        addStars += ratingStarss;
+      }
+      
+        else if (`${product.rating}` >= 4 && `${product.rating}` < 4.5) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_border</span>`
+        addStars += ratingStarss;
+      }
+
+      else if (`${product.rating}` >= 4.5 && `${product.rating}` < 5) {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star_half</span>`
+        addStars += ratingStarss;
+      }
+
+        else {
+        ratingStarss = `<span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span><span class="material-icons-round">star</span>`
+        addStars += ratingStarss;
+      }
 
 
-// ---------------------------------------
+// -----------//
+      //Colours (to add to template)---ok//
 
-//Colours
+      // array of colors each have one a string of text
 
-// array of colors each have one a string of text
+      let addColour = product.colours
+      let colourOption = ``
+      let colorsss = ``
+      for (let i = 0; i < addColour.length;i++) {
+        colorsss = `<li><label><input type="radio" name="colour"> ${addColour[i]}</label></li>`
 
-let colorme = product.colours
-let colorOption = ``
-let colorsss = ``
-for (let i = 0; i < colorme.length;i++) {
-  colorsss = `<li><label><input type="radio" name="colour"> ${colorme[i]}</label></li>`
-
-  colorOption += colorsss
-}
-console.log(colorOption);
-// forEach((color) => {
-//   colourOptions += `<li><label><input type="radio" name="colour"> ${color}</label></li>`
-// });
-
-// console.log(colourOptions);
-
-//<li><label><input type="radio" name="colour" value="k"> Black</label></li>
-
+        colourOption += colorsss
+      }
+      console.log(colourOption);
 
 // -------------------------
-
+// Product Template to HTML
 
     listItem.innerHTML = `
     <header>
@@ -187,7 +167,7 @@ console.log(colorOption);
       
         <dl>
         <dt>Rating</dt>
-        <dd>${product.rating} ${ramestarme} </dd>
+        <dd>${product.rating} ${addStars} </dd>
       </dl>
       <a href="product.html">see more</a>
     </header>
@@ -195,7 +175,7 @@ console.log(colorOption);
       <fieldset>  
         <legend>Colours</legend>
         <ul> 
-       ${colorOption}
+       ${colourOption}
         </ul>
       </fieldset>
       
@@ -207,26 +187,31 @@ console.log(colorOption);
     `
 
     // Add the new <li> element to the document
-    studentTable.appendChild(listItem)
+    productTable.appendChild(listItem)
     
   });
 
 }
-setStudentToTable(productsAr);
+setproductToTable(productsAr);
 
 
 
 
 //Filter
 
-//Sorting
 
-//Menu Toggle
-  //top menu toggle, insertion of 'hidden' on css for that object, on smallest viewport
 
-  /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function menuToggle() {
-    document.getElementById("menu").classList.toggle("show");
-  }
+
+
+
+//Sorting?
+
+
+
+
+//Menu Toggle ---ok//
+    
+  function menuToggle() {
+      document.getElementById("menu").classList.toggle("show");
+    }
 
