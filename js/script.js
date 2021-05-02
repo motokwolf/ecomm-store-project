@@ -240,6 +240,33 @@ const filteredProducts = productsAr.filter(function(product) {
 
 //Sorting?
 
+//selecting the sorting field
+const sortingFilter = document.querySelector(`#sort`)
+
+
+sortingFilter.addEventListener(`input`, function(event) {
+
+  //what option
+  const theSort = event.target
+  console.log(theSort.value)
+
+//ARGH IDK HOW TO DO THIS
+ //sort()
+// const filteredProducts = productsAr.sort( function({
+ // if (theSort.value == 'price-high') {
+//    (function(a, b){return b.ins - a.ins});
+ // }
+ // else if (theSort.value == 'price-low') {
+//    (function(a, b){return a.ins - b.ins});
+//} 
+//  else {
+//    filteredProducts = productsAr
+//  }
+// }))
+
+//console.log(filteredProducts)
+
+})
 
 
 
