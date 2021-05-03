@@ -556,16 +556,19 @@ button:hover {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 40em;
+    width: 100%;
     margin: 0 auto;
     grid-gap: 1em;
   }
   .bigimg {
     grid-column: span 3;
+    background: gray;
   }
   
   .thumb {
     opacity: 70%;
+    height: auto;
+    object-fit: cover;
   }
 
   .thumb:hover {
