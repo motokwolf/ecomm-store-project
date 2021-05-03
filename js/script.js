@@ -8,70 +8,70 @@ const productsAr = [
   {
       id: 01,
       name: `Pilot Fountain Pen Kakuno`,
-      ins: `$68.50`,
+      ins: 68.50,
       description: `Sailor Japanese Pen Company takes pride in the professionally skilled craftsman who ensure each nib is perfect.`,
       rating: 5.0,
       colours: [ `Black`, `White` ],
       }, {
       id: 02,
       name: `Pilot Metropolitan`,
-      ins: `$30.00`,
+      ins: 30.00,
       description: `Includes one proprietary Pilot squeeze converter for use with bottled ink, and one proprietary ink cartridge.`,
       rating: 2.5,
       colours: [ `Silver`,  `White`, `Blue`] ,
       }, {
       id: 03,
       name: `Lamy Z24 Converter`,
-      ins: `$20.90`,
+      ins: 20.90,
       description: `Century 37760oe converter with purchase.`,
       rating: 3.5,
       colours: [`Black` ],
       }, {
       id: 04,
       name: `Noodler's Ahab Flex Fountain Pen`,
-      ins: `$39.00`,
+      ins: 39.00,
       description: `This pen is a great way to get into the world of flex pens - writes like a fine nib with minimal pressure.`,
       rating: 5.0,
       colours: [ `Gold`, `Black`] ,
       }, {
       id: 05,
       name: `Pilot Metropolitan - Plain`,
-      ins: `$30.00`,
+      ins: 30.00,
       description: `The Pilot Metropolitan is a great starter pen. With its sleek metal body, easy snap cap, and smooth nib it's a perfect everyday writer.`,
       rating: 4.9,
       colours: [ `Red`, `White`, `Blue` ],
       }, {
       id: 06,
       name: `Lamy Al-Star Fountain Pen`,
-      ins: `$21.00`,
+      ins: 21.00,
       description: `With one of the smoothest nibs in its price range, it has the additional bonus of easily interchangeable nibs.`,
       rating: 4.2,
       colours: [ `Gold`, `Silver` ],
       }, {
       id: 07,
       name: `Kaweco Classic Sport Fountain Pen`,
-      ins: `$33.50`,
+      ins: 33.50,
       description: `Aptly named their "classic" fountain pen, the Sport has been an icon of the Kaweco brand for more than 80 years.`,
       rating: 4.5,
       colours: [ `Red`],
       }, {
       id: 08,
       name: `Parker Fountain Pen`,
-      ins: `$25.90`,
+      ins: 25.90,
       description: `Parker Jotter Fountain Pen - Bond Street Black CT. Comes with: 1 cartridge.`,
       rating: 4.4,
       colours: [ `Silver`],
       }, {
       id: 09,
       name: `Faber-Castell School Fountain Pen`,
-      ins: `$20.00`,
+      ins: 20.00,
       description: `A perfect starter pen, with an ergonomic triangular rubberised grip.`,
       rating: 3.0,
       colours: [ `Red`, `White`, `Blue` ],
       }, {
       id: 10,
       name: `Lamy Al-Star Fountain Pen`,
-      ins: `$49.50`,
+      ins: 49.50,
       description:  `It's a pen in every veteran writer's collection and its price makes it a top choice for new writers.`,
       rating: 4.6,
       colours: [ `Silver`, `White`, `Black` ],
@@ -168,6 +168,9 @@ const setproductToTable = function(theArray) {
         colourOption += colorsss
       }
 
+    //  num to dolar
+    const productPrice = product.ins.toFixed(2)
+
 // -------------------------
 // Product Template to HTML ---ok//
 
@@ -175,7 +178,7 @@ const setproductToTable = function(theArray) {
     <header>
       <a href="product.html"><img src="img/product0${product.id}.jpg" alt="Product Image: ${product.name}"></a>
       <h3>${product.name}</h3>
-      <data value="${product.ins}"><ins>${product.ins}</ins></data>
+      <data value="${product.ins}"><ins>$${productPrice}</ins></data>
       <p>${product.description}</p>  
       
         <dl>
@@ -233,6 +236,8 @@ const filteredProducts = productsAr.filter(function(product) {
 }
 })
 
+console.log(filteredProducts)
+
   // Build the Page with filtered array
  setproductToTable(filteredProducts)
 })
@@ -251,23 +256,24 @@ sortingFilter.addEventListener(`input`, function(event) {
   console.log(theSort.value)
 
 //ARGH IDK HOW TO DO THIS
- //sort()
-// const filteredProducts = productsAr.sort( function({
- // if (theSort.value == 'price-high') {
-//    (function(a, b){return b.ins - a.ins});
- // }
- // else if (theSort.value == 'price-low') {
-//    (function(a, b){return a.ins - b.ins});
-//} 
-//  else {
-//    filteredProducts = productsAr
-//  }
-// }))
-
-//console.log(filteredProducts)
-
+//sort()
+const filteredProducts = productsAr.sort( function(a, b){ 
+  if (theSort.value === `price-high`) {
+   return b.ins - a.ins;
+  } else if (theSort.value === `price-low`) {
+    return a.ins - b.ins;
+  }
+  else {
+    return a.id - b.id;
+  }
 })
 
+console.log(filteredProducts)
+
+// Build the Page with filtered array
+setproductToTable(filteredProducts)
+
+})
 
 
 //Menu Toggle ---ok//
